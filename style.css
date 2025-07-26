@@ -102,28 +102,54 @@ button:hover {
 
 @media (max-width: 768px) {
     header {
-        align-items: center;
         flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 1rem;
+    }
+
+    .logo {
+        max-width: 200px;
+        width: 100%;
     }
 
     nav {
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
     }
 
     .container-duas-colunas {
         flex-direction: column-reverse;
+        margin: 2rem;
+        text-align: center;
     }
 
-    .botao-quantum {
-        width: 400px;
+    .texto-coluna {
+        text-align: center;
     }
 
     .imagem-coluna {
-        width: 200px;
+        justify-content: center;
+        margin-bottom: 2rem;
     }
 
-    button {
-        margin-bottom: 2rem;
+    .imagem-coluna img {
+        max-width: 80%;
+    }
+
+    .botao-quantum {
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: 1rem;
     }
 }
