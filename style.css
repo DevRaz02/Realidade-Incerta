@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+body {
+    background: linear-gradient(to bottom, #0D1B2A 0%, #1A237E 100%);
+    width: 100%;
+    min-height: 100vh;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem 12rem;
+}
+
+.logo {
+    width: 200px;
+}
+
+nav {
+    display: flex;
+    gap: 40px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 20px;
+}
+
+a:hover {
+    color: #40C4FF;
+    font-size: 21px;
+    transition: 0.4s ease;
+}
+
+.container-duas-colunas {
+    display: flex;
+    margin: 0 12rem;
+    gap: 4rem;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.texto-coluna {
+    flex: 1;
+    text-align: left;
+}
+
+.texto-coluna h1 {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+}
+
+.texto-coluna p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.imagem-coluna {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.imagem-coluna img {
+    max-width: 100%;
+    height: auto;
+}
+
+span {
+    color: #40C4FF;
+}
+
+button {
+    border: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background-color: #000fb1;
+    border-radius: 20px;
+    color: #c4c4c4;
+    width: 50%;
+    height: 50px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #3586db;
+    color: #000000;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    header {
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .container-duas-colunas {
+        flex-direction: column-reverse;
+    }
+
+    .botao-quantum {
+        width: 400px;
+    }
+
+    .imagem-coluna {
+        width: 200px;
+    }
+
+    button {
+        margin-bottom: 2rem;
+    }
+}
