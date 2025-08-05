@@ -6,17 +6,21 @@
     <title>Realidade Incerta</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/Icon.png" />
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </head>
   <body>
+    <div id="particles-js"></div>
+
     <header>
       <img src="img/Logo.png" alt="Logo do site" class="logo" />
       <nav>
         <a href="#">Início</a>
-        <a href="#">Oque é Quântica? </a>
+        <a href="#">O que é Quântica? </a>
         <a href="#">Experimentos</a>
         <a href="#">Curiosidades</a>
       </nav>
     </header>
+
     <main>
       <div class="container-duas-colunas">
         <div class="texto-coluna">
@@ -27,16 +31,36 @@
           </h1>
           <p>
             Explore esse universo onde bits não são só 0 ou 1, e as decisões
-            moldam o presente e o futuro ao mesmo tempo.<br />
+            moldam o presente e o futuro ao mesmo tempo e como partículas podem
+            estar em 2 lugares ao mesmo tempo.
+          </p>
+          <p>
             Está pronto para decifrar o paradoxo e descobrir o seu papel na nova
             revolução tecnológica?
           </p>
-          <button class="botao-quantum">Seja Um Quantum!</button>
+          <button class="botao-quantum">Explore o Quantum</button>
         </div>
+
         <div class="imagem-coluna">
           <img src="img/science.png" alt="Ilustração de computação quântica" />
         </div>
       </div>
     </main>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 40 },
+          color: { value: ["#40C4FF", "#6D28D9"] },
+          shape: { type: "edge" },
+          opacity: { value: 0.3, random: true },
+          size: { value: 4, random: true },
+          move: { enable: true, speed: 1, direction: "none", out_mode: "out" },
+        },
+        interactivity: {
+          events: { onhover: { enable: true, mode: "repulse" } },
+        },
+      });
+    </script>
   </body>
 </html>
