@@ -64,45 +64,45 @@ nav {
 }
 
 nav a {
+    position: relative;
     text-decoration: none;
     font-size: 20px;
-    transition: all 1s ease;
+    color: #a0a0a0;
+    transition: all 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-    position: relative;
+    color: #ffffff;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    font-size: 21px;
+    transform: scale(1.05);
 }
 
 nav a:hover:after {
     content: "";
     position: absolute;
-    z-index: -1;
-    top: 0;
+    top: 100%;
     left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(circle, rgba(37, 181, 248, 0.8) 0%, rgba(29, 39, 126, 0) 70%);
-    animation: quantumCollapse 0.7s ease-out infinite;
-    border-radius: 4px;
-
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #3586db, #40C4FF);
+    animation: espandir 0.3s ease forwards;
 }
 
-@keyframes quantumCollapse {
-    0% {
-        transform: scale(0.5);
-        opacity: 1;
+@keyframes espandir {
+    from {
+        width: 0;
     }
 
-    100% {
-        transform: scale(1.5);
-        opacity: 0;
+    to {
+        width: 100%;
     }
 }
 
-
-a:active {
-    color: #507fff;
+nav a:active {
+    transform: scale(0.95);
 }
+
 
 .container-duas-colunas {
     display: flex;
@@ -130,6 +130,7 @@ a:active {
     color: rgba(255, 255, 255, 0.9);
 }
 
+
 .imagem-coluna {
     flex: 1;
     display: flex;
@@ -141,30 +142,55 @@ a:active {
     height: auto;
 }
 
+.QuantumLogo {
+    animation: flutuar 4s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(53, 134, 219, 0.5));
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
 span {
     color: #40C4FF;
 }
 
-button {
+.botao-quantum {
     border: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: bold;
-    background-color: #000fb1;
-    border-radius: 20px;
-    color: #c4c4c4;
+    background: linear-gradient(90deg, #000fb1, #3586db);
+    border-radius: 25px;
+    color: #fff;
     width: 50%;
     height: 50px;
-    transition: all 0.3s ease;
+    transition: all 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 0 15px rgba(53, 134, 219, 0.5);
+    position: relative;
+    overflow: hidden;
 }
 
-button:hover {
-    background-color: #3586db;
-    color: #000000;
+.botao-quantum:hover {
+    background: linear-gradient(90deg, #3586db, #40C4FF);
+    color: #000;
     cursor: pointer;
+    box-shadow: 0 0 20px rgba(64, 196, 255, 0.8);
+    transform: scale(1.05);
 }
 
-button:active {
-    background-color: #0b4af5;
+.botao-quantum:active {
+    background: #0b4af5;
+    transform: scale(0.98);
 }
 
 @media (max-width: 768px) {

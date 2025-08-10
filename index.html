@@ -38,11 +38,17 @@
             Está pronto para decifrar o paradoxo e descobrir o seu papel na nova
             revolução tecnológica?
           </p>
-          <button class="botao-quantum">Explore o Quantum</button>
+          <button class="botao-quantum" id="BtnPortal">
+            Aprenda Quântica na Prática
+          </button>
         </div>
 
         <div class="imagem-coluna">
-          <img src="img/science.png" alt="Ilustração de computação quântica" />
+          <img
+            class="QuantumLogo"
+            src="img/science.png"
+            alt="Ilustração de computação quântica"
+          />
         </div>
       </div>
     </main>
@@ -54,13 +60,27 @@
           color: { value: ["#40C4FF", "#6D28D9"] },
           shape: { type: "edge" },
           opacity: { value: 0.3, random: true },
-          size: { value: 4, random: true },
-          move: { enable: true, speed: 1, direction: "none", out_mode: "out" },
+          size: { value: 5, random: true },
+          move: { enable: true, speed: 2, direction: "none", out_mode: "out" },
         },
         interactivity: {
           events: { onhover: { enable: true, mode: "repulse" } },
         },
       });
+
+      document
+        .getElementById("BtnPortal")
+        .addEventListener("click", function () {
+          if (
+            confirm(
+              "você serã direcionado para o site IBM Quantum, deseja Continuar?"
+            )
+          )
+            window.location.href = "https://quantum.ibm.com/";
+          else {
+            alert("você não esta pronto para o Quantum!");
+          }
+        });
     </script>
   </body>
 </html>
