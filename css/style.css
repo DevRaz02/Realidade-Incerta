@@ -106,10 +106,10 @@ nav a:active {
 
 .container-duas-colunas {
     display: flex;
-    margin: 0 12rem;
+    margin: 0 10rem;
     gap: 4rem;
     align-items: center;
-    margin-top: 3rem;
+    margin-top: 1rem;
 }
 
 .texto-coluna {
@@ -126,7 +126,7 @@ nav a:active {
 .texto-coluna p {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     color: rgba(255, 255, 255, 0.9);
 }
 
@@ -161,9 +161,16 @@ nav a:active {
     }
 }
 
-span {
+.cor1 {
     color: #40C4FF;
+    font-weight: bold;
 }
+
+.cor2 {
+    color: #ffbb00;
+    font-weight: bold;
+}
+
 
 .botao-quantum {
     border: none;
@@ -191,6 +198,57 @@ span {
 .botao-quantum:active {
     background: #0b4af5;
     transform: scale(0.98);
+}
+
+#sesao-quantica {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container-quantica {
+    background-color: #0B0B2B;
+    margin: 0 10rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    border-radius: 20px;
+}
+
+.paragrafo-quantico {
+    text-align: center;
+    flex: 1;
+}
+
+
+.paragrafo-quantico h1 {
+    margin-bottom: 2rem
+}
+
+.paragrafo-quantico p {
+    margin-bottom: 1rem;
+    font-size: 17px;
+    color: #ffffff;
+}
+
+.Pratic-qubit {
+    text-align: center;
+    flex: 1;
+}
+
+.qubit {
+    margin: 3rem;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.Pratic-qubit p {
+    margin: 2rem;
+    font-size: 17px;
+    color: #ffffff;
 }
 
 @media (max-width: 768px) {

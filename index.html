@@ -11,11 +11,11 @@
   <body>
     <div id="particles-js"></div>
 
-    <header>
+    <header id="inicio">
       <img src="img/Logo.png" alt="Logo do site" class="logo" />
       <nav>
-        <a href="#">Início</a>
-        <a href="#">O que é Quântica? </a>
+        <a href="#inicio">Início</a>
+        <a href="#sesao-quantica">O que é Quântica? </a>
         <a href="#">Experimentos</a>
         <a href="#">Curiosidades</a>
       </nav>
@@ -27,7 +27,7 @@
           <h1>
             Entre a vida e a morte, a certeza e o caos, existe um mundo onde
             tudo é possível –
-            <span>bem-vindo à era da Computação Quântica.</span>
+            <span class="cor1">bem-vindo à era da Computação Quântica.</span>
           </h1>
           <p>
             Explore esse universo onde bits não são só 0 ou 1, e as decisões
@@ -38,9 +38,7 @@
             Está pronto para decifrar o paradoxo e descobrir o seu papel na nova
             revolução tecnológica?
           </p>
-          <button class="botao-quantum" id="BtnPortal">
-            Aprenda Quântica na Prática
-          </button>
+          <button class="botao-quantum" id="BtnPortal">botão inativo</button>
         </div>
 
         <div class="imagem-coluna">
@@ -53,34 +51,116 @@
       </div>
     </main>
 
-    <script>
-      particlesJS("particles-js", {
-        particles: {
-          number: { value: 40 },
-          color: { value: ["#40C4FF", "#6D28D9"] },
-          shape: { type: "edge" },
-          opacity: { value: 0.3, random: true },
-          size: { value: 5, random: true },
-          move: { enable: true, speed: 2, direction: "none", out_mode: "out" },
-        },
-        interactivity: {
-          events: { onhover: { enable: true, mode: "repulse" } },
-        },
-      });
+    <section id="sesao-quantica">
+      <div class="container-quantica">
 
-      document
-        .getElementById("BtnPortal")
-        .addEventListener("click", function () {
-          if (
-            confirm(
-              "você serã direcionado para o site IBM Quantum, deseja Continuar?"
-            )
-          )
-            window.location.href = "https://quantum.ibm.com/";
-          else {
-            alert("você não esta pronto para o Quantum!");
-          }
-        });
+        <div class="paragrafo-quantico">
+
+          <h1><span class="cor1">O que é quântica?</h1>
+
+          <p>
+            Sabe aquele mundo das coisas tão pequenas que a gente nem consegue
+            ver? Lá, as regras são completamente diferentes.
+          </p>
+
+          <p>
+            É disso que a física quântica fala: do "modo secreto" do universo,
+            onde partículas podem estar em dois lugares ao mesmo tempo, sumir e
+            aparecer de novo, ou até influenciar outras que estão bem longe.
+          </p>
+
+          <p>
+            <span class="cor1">Estranho?</span>
+            Muito.
+            <span class="cor1">Fascinante?</span>
+          </p>
+
+          <p>
+            Mais ainda. É justamente essa loucura que inspira tecnologia,
+            inovação e novas maneiras de entender o mundo.
+          </p>
+
+          <p>
+            A quântica está aí pra provar que sempre existe mais do que nossos
+            olhos alcançam.
+          </p>
+
+        </div>
+
+        <div class="Pratic-qubit">
+
+          <h1>Simule um <span class="cor1">Qubit</span> na prática</h1>
+
+          <div class="qubit"><span class="cor2" id="estado" >[ 0 + 1 ]</span></div>
+          <button class="botao-quantum" id="medir" >Medir</button>
+
+          <p>
+            Este medidor simula um qubit, o <span class="cor1">“bit quântico”</span>. Ao clicar em Medir,
+            ele escolhe aleatoriamente <span class="cor2">0</span> ou <span class="cor2">1</span>,como um qubit real que tem <span class="cor2">50%</span> de chance de ser cada valor quando observado.
+          </p>
+
+        </div>
+      </div>
+    </section>
+
+    <script>
+  particlesJS("particles-js", {
+    particles: {
+      number: { 
+        value: 30 
+      },
+      color: { 
+        value: ["#40C4FF", "#6D28D9"] 
+      },
+      shape: { 
+        type: "edge" 
+      },
+      opacity: { 
+        value: 0.3, 
+        random: true 
+      },
+      size: { 
+        value: 5, 
+        random: true 
+      },
+      move: { 
+        enable: true, 
+        speed: 2,    
+        direction: "none", 
+        out_mode: "out" 
+      },
+      line_linked: {
+        enable: true 
+      }
+    },
+    interactivity: {
+      events: { 
+        onhover: { 
+          enable: true,
+          mode: "repulse" 
+        },
+        onclick: { 
+          enable: false 
+        }
+      },
+      modes: {
+        repulse: {
+          distance: 100, 
+          duration: 0.4  
+        }
+      }
+    }
+  });
+
+
+  const estado = document.getElementById("estado");
+  const medir = document.getElementById("medir");
+
+  medir.addEventListener("click", () => {
+    const resultado = Math.random() < 0.5 ? "0" : "1";
+    estado.textContent = `[${resultado}]`;
+    estado.style.color = resultado === "0" ? "#ffbb00" : "#ffbb00";
+  });
     </script>
   </body>
 </html>
