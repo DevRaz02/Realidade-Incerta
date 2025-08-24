@@ -282,12 +282,17 @@ nav a:active {
 }
 
 @media (max-width: 750px) {
+    header {
+        justify-content: center;
+    }
+
     .hamburger {
         display: block;
         left: 10rem;
     }
 
     .logo {
+        width: 10rem;
         z-index: 0;
     }
 
