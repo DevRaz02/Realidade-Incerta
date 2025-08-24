@@ -332,9 +332,11 @@ nav a:active {
 
     .container-quantica {
         height: 20rem;
-        margin: 2rem;
-        padding: 2rem;
+        margin: 2rem auto;
+        padding: 1.5rem;
+        max-width: 600px;
         height: auto;
+        text-align: center;
         align-items: center;
         flex-direction: column;
     }
