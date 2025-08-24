@@ -3,8 +3,10 @@
 * {
     margin: 0;
     padding: 0;
+    list-style: none;
     box-sizing: border-box;
     color: #fff;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -25,9 +27,9 @@ body {
     pointer-events: auto;
 }
 
-header, .container-duas-colunas, .logo, .imagem-coluna img {
-    position: relative;
-    z-index: 1;
+.container-duas-colunas, .logo, .imagem-coluna img {
+
+    z-index: 2;
     pointer-events: none;
 }
 
@@ -48,33 +50,66 @@ a, button {
 }
 
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(50px);
     justify-content: space-between;
     align-items: center;
-    margin: 1rem 12rem 0 6rem;
+    padding: 0 7rem 0 7rem;
+    transition: all 0.4s ease;
+    z-index: 1000;
 }
 
 .logo {
-    width: 320px;
+    width: 150px;
+}
+
+.hamburger {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #fff;
+    cursor: pointer;
+}
+
+.hamburger::before, .hamburger::after {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #fff;
+    margin-top: 5px;
 }
 
 nav {
+    position: static;
     display: flex;
     gap: 40px;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
 }
 
 nav a {
     position: relative;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 1.20rem;
     color: #a0a0a0;
+    padding-block: 10px;
     transition: all 0.3s ease, transform 0.2s ease;
 }
 
 nav a:hover {
     color: #ffffff;
     filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
-    font-size: 21px;
+    font-size: 19px;
     transform: scale(1.05);
 }
 
@@ -103,13 +138,11 @@ nav a:active {
     transform: scale(0.95);
 }
 
-
 .container-duas-colunas {
     display: flex;
-    margin: 0 10rem;
+    margin: 10rem 5rem 0 5rem;
     gap: 4rem;
     align-items: center;
-    margin-top: 1rem;
 }
 
 .texto-coluna {
@@ -126,10 +159,9 @@ nav a:active {
 .texto-coluna p {
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     color: rgba(255, 255, 255, 0.9);
 }
-
 
 .imagem-coluna {
     flex: 1;
@@ -171,7 +203,6 @@ nav a:active {
     font-weight: bold;
 }
 
-
 .botao-quantum {
     border: none;
     font-size: 1rem;
@@ -202,7 +233,7 @@ nav a:active {
 
 #sesao-quantica {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -223,9 +254,8 @@ nav a:active {
     flex: 1;
 }
 
-
 .paragrafo-quantico h1 {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
 .paragrafo-quantico p {
@@ -251,56 +281,65 @@ nav a:active {
     color: #ffffff;
 }
 
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        margin: 1rem;
+@media (max-width: 750px) {
+    .hamburger {
+        display: block;
+        left: 10rem;
     }
 
     .logo {
-        max-width: 360px;
-        width: 100%;
+        z-index: 0;
     }
 
-    nav {
+    ul {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 50vw;
+        height: 100vh;
+        padding: 8vh;
+        background: #0D1B2A;
         flex-direction: column;
+        justify-content: space-around;
         align-items: center;
-        gap: 1rem;
-        margin-top: 1rem;
+        clip-path: circle(0 at 90% -15%);
+        transition: clip-path 1s ease-out;
+        pointer-events: none;
+    }
+
+    nav.active ul {
+        clip-path: circle(1500px at 90% -15%);
+        pointer-events: all;
     }
 
     .container-duas-colunas {
         flex-direction: column-reverse;
-        margin: 2rem;
-        text-align: center;
     }
 
     .texto-coluna {
         text-align: center;
     }
 
-    .imagem-coluna {
-        justify-content: center;
+    .botao-quantum {
+        width: 25rem;
+        margin: 2rem;
+    }
+
+    .container-quantica {
+        height: 20rem;
+        margin: 2rem;
+        padding: 2rem;
+        height: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .paragrafo-quantico {
+        text-align: center;
         margin-bottom: 2rem;
     }
 
-    .imagem-coluna img {
-        max-width: 80%;
-    }
-
-    .botao-quantum {
-        width: 90%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    h1 {
-        font-size: 1.6rem;
-    }
-
-    p {
-        font-size: 1rem;
+    .Pratic-qubit {
+        align-items: center;
     }
 }

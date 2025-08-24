@@ -1,23 +1,40 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" id="inicio">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Realidade Incerta</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="icon" href="img/Icon.png" />
+    <link
+      href="https://cdn.boxicons.com/fonts/basic/boxicons.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <meta
+      name="description"
+      content="Landing page sobre computação quântica com explicações, experimentos e curiosidades."
+    />
   </head>
   <body>
     <div id="particles-js"></div>
 
-    <header id="inicio">
-      <img src="img/Logo.png" alt="Logo do site" class="logo" />
-      <nav>
-        <a href="#inicio">Início</a>
-        <a href="#sesao-quantica">O que é Quântica? </a>
-        <a href="#">Experimentos</a>
-        <a href="#">Curiosidades</a>
+    <header>
+      <img
+        src="img/Logo.png"
+        alt="Logotipo Realidade Incerta com silhueta de gato"
+        class="logo"
+      />
+
+      <button class="hamburger"></button>
+
+      <nav id="navbar">
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#sesao-quantica">O que é Quântica? </a></li>
+          <li><a href="#">Experimentos</a></li>
+          <li><a href="#">Curiosidades</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -30,9 +47,10 @@
             <span class="cor1">bem-vindo à era da Computação Quântica.</span>
           </h1>
           <p>
-            Explore esse universo onde bits não são só 0 ou 1, e as decisões
-            moldam o presente e o futuro ao mesmo tempo e como partículas podem
-            estar em 2 lugares ao mesmo tempo.
+            Explore esse universo onde bits não são só
+            <span class="cor2">0</span> e <span class="cor2">1</span>, e as
+            decisões moldam o presente e o futuro ao mesmo tempo e como
+            partículas podem estar em 2 lugares ao mesmo tempo.
           </p>
           <p>
             Está pronto para decifrar o paradoxo e descobrir o seu papel na nova
@@ -53,114 +71,93 @@
 
     <section id="sesao-quantica">
       <div class="container-quantica">
-
         <div class="paragrafo-quantico">
-
-          <h1><span class="cor1">O que é quântica?</h1>
-
+          <h1><span class="cor1">O que é quântica?</span></h1>
           <p>
             Sabe aquele mundo das coisas tão pequenas que a gente nem consegue
             ver? Lá, as regras são completamente diferentes.
           </p>
-
           <p>
-            É disso que a física quântica fala: do "modo secreto" do universo,
-            onde partículas podem estar em dois lugares ao mesmo tempo, sumir e
+            É disso que a física quântica fala: do
+            <span class="cor2"> "modo secreto" </span>do universo, onde
+            partículas podem estar em dois lugares ao mesmo tempo, sumir e
             aparecer de novo, ou até influenciar outras que estão bem longe.
           </p>
-
           <p>
             <span class="cor1">Estranho?</span>
             Muito.
             <span class="cor1">Fascinante?</span>
           </p>
-
           <p>
             Mais ainda. É justamente essa loucura que inspira tecnologia,
             inovação e novas maneiras de entender o mundo.
           </p>
-
           <p>
             A quântica está aí pra provar que sempre existe mais do que nossos
             olhos alcançam.
           </p>
-
         </div>
 
         <div class="Pratic-qubit">
-
           <h1>Simule um <span class="cor1">Qubit</span> na prática</h1>
-
-          <div class="qubit"><span class="cor2" id="estado" >[ 0 + 1 ]</span></div>
-          <button class="botao-quantum" id="medir" >Medir</button>
-
+          <div class="qubit">
+            <span class="cor2" id="estado">[ 0 + 1 ]</span>
+          </div>
+          <button class="botao-quantum" id="medir">Medir</button>
           <p>
-            Este medidor simula um qubit, o <span class="cor1">“bit quântico”</span>. Ao clicar em Medir,
-            ele escolhe aleatoriamente <span class="cor2">0</span> ou <span class="cor2">1</span>,como um qubit real que tem <span class="cor2">50%</span> de chance de ser cada valor quando observado.
+            Este medidor simula um qubit, o
+            <span class="cor1">“bit quântico”</span>. Ao clicar em Medir, ele
+            escolhe aleatoriamente <span class="cor2">0</span> ou
+            <span class="cor2">1</span>, como um qubit real que tem
+            <span class="cor2">50%</span> de chance de ser cada valor quando
+            observado.
           </p>
-
         </div>
       </div>
     </section>
-
+    <!-- particulas js -->
     <script>
-  particlesJS("particles-js", {
-    particles: {
-      number: { 
-        value: 30 
-      },
-      color: { 
-        value: ["#40C4FF", "#6D28D9"] 
-      },
-      shape: { 
-        type: "edge" 
-      },
-      opacity: { 
-        value: 0.3, 
-        random: true 
-      },
-      size: { 
-        value: 5, 
-        random: true 
-      },
-      move: { 
-        enable: true, 
-        speed: 2,    
-        direction: "none", 
-        out_mode: "out" 
-      },
-      line_linked: {
-        enable: true 
-      }
-    },
-    interactivity: {
-      events: { 
-        onhover: { 
-          enable: true,
-          mode: "repulse" 
+      particlesJS("particles-js", {
+        particles: {
+          number: { value: 30 },
+          color: { value: ["#40C4FF", "#6D28D9"] },
+          shape: { type: "edge" },
+          opacity: { value: 0.3, random: true },
+          size: { value: 5, random: true },
+          move: { enable: true, speed: 2, direction: "none", out_mode: "out" },
+          line_linked: { enable: true },
         },
-        onclick: { 
-          enable: false 
-        }
-      },
-      modes: {
-        repulse: {
-          distance: 100, 
-          duration: 0.4  
-        }
-      }
-    }
-  });
+        interactivity: {
+          events: {
+            onhover: { enable: true, mode: "repulse" },
+            onclick: { enable: false },
+          },
+          modes: { repulse: { distance: 100, duration: 0.4 } },
+        },
+      });
 
+      // medir qubit js
+      const estado = document.getElementById("estado");
+      const medir = document.getElementById("medir");
 
-  const estado = document.getElementById("estado");
-  const medir = document.getElementById("medir");
+      medir.addEventListener("click", () => {
+        const resultado = Math.random() < 0.5 ? "0" : "1";
+        estado.textContent = `[${resultado}]`;
+      });
 
-  medir.addEventListener("click", () => {
-    const resultado = Math.random() < 0.5 ? "0" : "1";
-    estado.textContent = `[${resultado}]`;
+      // interaçao nav hamburger
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.getElementById("navbar");
 
-  });
+      hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+      // fechamento do nav hamburger ao clicar
+      const navlinks = document.querySelectorAll("#navbar a");
+
+      navlinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("active");
+        });
+      });
     </script>
   </body>
 </html>
