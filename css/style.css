@@ -9,8 +9,12 @@
     scroll-behavior: smooth;
 }
 
+h2, h3 {
+    padding-bottom: 2rem;
+}
+
 body {
-    background: linear-gradient(to bottom, #0D1B2A 0%, #1A237E 100%);
+    background: #1b4672;
     width: 100%;
     min-height: 100vh;
     font-family: "Roboto", sans-serif;
@@ -27,8 +31,7 @@ body {
     pointer-events: auto;
 }
 
-.container-duas-colunas, .logo, .imagem-coluna img {
-
+.container-duas-colunas, .logo, .imagem-coluna img .caixa-texto footer {
     z-index: 2;
     pointer-events: none;
 }
@@ -55,7 +58,7 @@ header {
     left: 0;
     width: 100%;
     display: flex;
-    background: rgba(0, 0, 0, .1);
+    background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(50px);
     justify-content: space-between;
     align-items: center;
@@ -120,7 +123,7 @@ nav a:hover:after {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(90deg, #3586db, #40C4FF);
+    background: linear-gradient(90deg, #24588f, #277aa0);
     animation: espandir 0.3s ease forwards;
 }
 
@@ -235,6 +238,7 @@ nav a:active {
     width: 100%;
     min-height: 100vh;
     display: flex;
+    margin-bottom: 2rem;
     justify-content: center;
     flex-direction: column;
 }
@@ -242,10 +246,14 @@ nav a:active {
 .container-quantica {
     background-color: #0B0B2B;
     margin: 0 10rem;
-    padding: 2rem;
+    padding: 3rem;
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    box-shadow: -12px 17px 20px 3px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: -12px 17px 20px 3px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: -12px 17px 20px 3px rgba(0, 0, 0, 0.8);
+    border: #000000 1px solid;
     border-radius: 20px;
 }
 
@@ -281,6 +289,106 @@ nav a:active {
     color: #ffffff;
 }
 
+#sesao-cientistas {
+    width: 100%;
+    height: 100vh;
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.container-cientistas {
+    color: #ffffff;
+    border: #000000 2px solid;
+    box-shadow: -12px 17px 20px 3px rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: -12px 17px 20px 3px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: -12px 17px 20px 3px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    padding: 1.5rem;
+    line-height: 2rem;
+    margin: 2rem;
+    text-align: center;
+    background-color: #0b0b2b;
+}
+
+.cientistas-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 2rem 0;
+}
+
+.cientista-box {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: #0b0b2b86;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
+    border: #12132b 2px solid;
+    border-radius: 15px;
+
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.cientista-box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 20px rgba(64, 196, 255, 0.8);
+}
+
+.cientista-esquerda {
+    justify-content: flex-start;
+    margin-right: auto;
+    width: 60%;
+}
+
+.cientista-direita {
+    justify-content: flex-end;
+    margin-left: auto;
+    width: 60%;
+}
+
+.img-cientista {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid #24248b;
+    border-radius: 10px;
+    margin: 0 1.5rem;
+    box-shadow: 0 0 15px rgba(123, 154, 204, 0.6);
+    transition: transform 0.4s ease;
+}
+
+.caixa-descricao {
+    padding: 1rem;
+    text-align: center;
+    background: rgba(13, 13, 43, 0.7);
+    border-radius: 10px;
+    border: 1px solid #24248b;
+    flex: 1;
+}
+
+.caixa-descricao h3 {
+    color: #7b9acc;
+}
+
+.caixa-descricao p {
+    line-height: 1.6;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    margin-top: 1300px;
+    padding: 1rem 0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.753);
+    backdrop-filter: blur(50px);
+}
+
+
 @media (max-width: 750px) {
     header {
         justify-content: center;
@@ -303,7 +411,7 @@ nav a:active {
         width: 50vw;
         height: 100vh;
         padding: 8vh;
-        background: #0D1B2A;
+        background-color: #051d38;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
@@ -335,10 +443,15 @@ nav a:active {
         margin: 2rem auto;
         padding: 1.5rem;
         max-width: 600px;
+        margin: 2rem;
         height: auto;
         text-align: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .QuantumLogo {
+        width: 100%;
     }
 
     .paragrafo-quantico {
@@ -348,5 +461,25 @@ nav a:active {
 
     .Pratic-qubit {
         align-items: center;
+    }
+
+    .cientista-box {
+        flex-direction: column;
+        width: 90% !important;
+        margin: 1rem auto !important;
+    }
+
+    .img-cientista {
+        margin: 1rem 0;
+    }
+
+    .caixa-descricao {
+        text-align: center;
+    }
+
+    footer {
+        margin-top: 2700px;
+        font-size: 13px;
+        padding: 0.5rem 0;
     }
 }

@@ -32,8 +32,7 @@
         <ul>
           <li><a href="#inicio">Início</a></li>
           <li><a href="#sesao-quantica">O que é Quântica? </a></li>
-          <li><a href="#">Experimentos</a></li>
-          <li><a href="#">Curiosidades</a></li>
+          <li><a href="#sesao-cientistas">Como ela surgiu?</a></li>
         </ul>
       </nav>
     </header>
@@ -72,7 +71,7 @@
     <section id="sesao-quantica">
       <div class="container-quantica">
         <div class="paragrafo-quantico">
-          <h1><span class="cor1">O que é quântica?</span></h1>
+          <h2><span class="cor1">O que é quântica?</span></h2>
           <p>
             Sabe aquele mundo das coisas tão pequenas que a gente nem consegue
             ver? Lá, as regras são completamente diferentes.
@@ -99,7 +98,7 @@
         </div>
 
         <div class="Pratic-qubit">
-          <h1>Simule um <span class="cor1">Qubit</span> na prática</h1>
+          <h3>Simule um <span class="cor1">Qubit</span> na prática</h3>
           <div class="qubit">
             <span class="cor2" id="estado">[ 0 + 1 ]</span>
           </div>
@@ -115,11 +114,135 @@
         </div>
       </div>
     </section>
+
+    <section id="sesao-cientistas">
+      <div class="container-cientistas">
+        <h2><span class="cor1">Como ela surgiu?</span></h2>
+
+        <p>
+          No começo do século XX, os cientistas começaram a notar que as leis
+          conhecidas da física não davam conta de explicar certos mistérios. Por
+          exemplo: por que os átomos emitem luz em cores específicas? Ou como a
+          luz consegue às vezes se comportar como onda e às vezes como
+          partícula?
+        </p>
+        <p>
+          Foi tentando responder a perguntas assim que nasceu a
+          <span class="cor1">Física Quântica</span> — e a história é cheia de
+          protagonistas brilhantes:
+        </p>
+      </div>
+
+      <div class="cientistas-container">
+        <div class="cientista-box cientista-esquerda">
+          <div class="caixa-img">
+            <img
+              src="img/Max_Planck.jpg"
+              class="img-cientista"
+              alt="Max Planck"
+            />
+          </div>
+          <div class="caixa-descricao">
+            <h3>Max Planck</h3>
+            <p>
+              Foi o primeiro a dar o passo ousado: em 1900, ele sugeriu que a
+              energia não é contínua, mas vem em pacotinhos chamados quanta.
+            </p>
+          </div>
+        </div>
+
+        <div class="cientista-box cientista-direita">
+          <div class="caixa-img">
+            <img
+              src="img/einstenin.webp"
+              class="img-cientista"
+              alt="Albert Einstein"
+            />
+          </div>
+          <div class="caixa-descricao">
+            <h3>Albert Einstein</h3>
+            <p>
+              Levou essa ideia adiante e explicou o efeito fotoelétrico,
+              mostrando que a luz pode se comportar como partículas (fótons).
+            </p>
+          </div>
+        </div>
+
+        <div class="cientista-box cientista-esquerda">
+          <div class="caixa-img">
+            <img
+              src="img/Niels_Bohr.jpg"
+              class="img-cientista"
+              alt="Niels Bohr"
+            />
+          </div>
+          <div class="caixa-descricao">
+            <h3>Niels Bohr</h3>
+            <p>
+              Criou um modelo de átomo em que os elétrons só podiam ocupar
+              órbitas específicas — algo totalmente novo para a época.
+            </p>
+          </div>
+        </div>
+
+        <div class="cientista-box cientista-direita">
+          <div class="caixa-img">
+            <img
+              src="img/Werner_Heisenberg.jpg"
+              class="img-cientista"
+              alt="Werner Heisenberg"
+            />
+          </div>
+          <div class="caixa-descricao">
+            <h3>Werner Heisenberg</h3>
+            <p>
+              Trouxe o famoso Princípio da Incerteza: não dá para saber tudo de
+              uma partícula ao mesmo tempo.
+            </p>
+          </div>
+        </div>
+
+        <div class="cientista-box cientista-esquerda">
+          <div class="caixa-img">
+            <img
+              src="img/Erwin_Schrödinger.jpg"
+              class="img-cientista"
+              alt="Erwin Schrödinger"
+            />
+          </div>
+          <div class="caixa-descricao">
+            <h3>Erwin Schrödinger</h3>
+            <p>
+              Mostrou que as partículas também podiam ser descritas como ondas
+              de probabilidade.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container-cientistas">
+        <p>
+          Cada um deles acrescentou uma peça nesse quebra-cabeça que
+          revolucionou a ciência. E a partir daí, a
+          <span class="cor1">Física Quântica </span> passou a ser a base de
+          tecnologias que hoje fazem parte do nosso cotidiano — dos lasers aos
+          chips de computador.
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>
+        <strong><span class="cor1">Realidade Incerta</span></strong> -
+        Explorando os fundamentos da computação quântica através de experiências
+        interativas
+      </p>
+    </footer>
     <!-- particulas js -->
     <script>
       particlesJS("particles-js", {
         particles: {
-          number: { value: 30 },
+          number: { value: 35 },
           color: { value: ["#40C4FF", "#6D28D9"] },
           shape: { type: "edge" },
           opacity: { value: 0.3, random: true },
@@ -150,12 +273,22 @@
       const nav = document.getElementById("navbar");
 
       hamburger.addEventListener("click", () => nav.classList.toggle("active"));
+
       // fechamento do nav hamburger ao clicar
       const navlinks = document.querySelectorAll("#navbar a");
 
       navlinks.forEach((link) => {
         link.addEventListener("click", () => {
           nav.classList.remove("active");
+        });
+      });
+
+      document.querySelectorAll(".cientista-linha").forEach((linha) => {
+        const imagem = linha.querySelector(".caixa-cientista");
+        const texto = linha.querySelector(".texto-coluna");
+
+        imagem.addEventListener("click", () => {
+          texto.classList.toggle("esconder");
         });
       });
     </script>
