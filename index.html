@@ -26,13 +26,23 @@
         class="logo"
       />
 
-      <button class="hamburger"></button>
+      <button class="hamburger" aria-label="Abrir menu de navegação"></button>
 
       <nav id="navbar">
         <ul>
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sesao-quantica">O que é Quântica? </a></li>
-          <li><a href="#sesao-cientistas">Como ela surgiu?</a></li>
+          <li><a href="#inicio" title="inicio do site">Início</a></li>
+          <li>
+            <a href="#sesao-quantica" title="ir para sesao-quantica"
+              >O que é Quântica?
+            </a>
+          </li>
+          <li>
+            <a href="#sesao-cientistas" title="ir para sesao-cientistas"
+              >Como ela surgiu?</a
+            >
+          </li>
+
+          <li><a href="#futuro">O Futuro que nos Espera</a></li>
         </ul>
       </nav>
     </header>
@@ -228,6 +238,77 @@
           tecnologias que hoje fazem parte do nosso cotidiano — dos lasers aos
           chips de computador.
         </p>
+      </div>
+
+      <div class="container-video">
+        <h2>Entenda mais sobre o conceito Quântico com esse Video:</h2>
+        <iframe
+          width="500"
+          height="200"
+          src="https://www.youtube.com/embed/eA1E2HGdbKg?si=wzgpkjsEOVvzu3KZ"
+          title="Video Explicativo sobre Computação Quântica"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="futuro">
+      <div class="container-encerramento">
+        <h2>O Futuro que nos Espera</h2>
+        <p>
+          A <span class="cor1">física quântica</span> deixou de ser apenas
+          teoria e já começa a moldar o nosso futuro. Suas aplicações prometem
+          transformar a tecnologia, a ciência e até a forma como vivemos.
+        </p>
+
+        <div class="futuro-cards">
+          <div class="card-futuro">
+            <h3>💻 Computação Quântica</h3>
+            <p>
+              Capaz de resolver em segundos problemas que levariam milhares de
+              anos para computadores tradicionais, abrindo caminho para avanços
+              em <span class="cor2">inteligência artificial</span>,
+              <span class="cor2">clima</span> e
+              <span class="cor2">medicina</span>.
+            </p>
+          </div>
+
+          <div class="card-futuro">
+            <h3>🔒 Criptografia Quântica</h3>
+            <p>
+              Um sistema de comunicação praticamente impossível de ser
+              espionado, garantindo
+              <span class="cor2">segurança digital</span> para governos,
+              empresas e usuários.
+            </p>
+          </div>
+
+          <div class="card-futuro">
+            <h3>🧬 Medicina de Precisão</h3>
+            <p>
+              Novos métodos de diagnóstico por
+              <span class="cor2">sensores quânticos</span>
+              podem detectar doenças em estágios iniciais e ajudar na criação de
+              tratamentos personalizados.
+            </p>
+          </div>
+
+          <div class="card-futuro">
+            <h3>⚡ Novos Materiais</h3>
+            <p>
+              Supercondutores, baterias mais eficientes e tecnologias de energia
+              limpa são apenas alguns dos resultados esperados da aplicação da
+              física quântica.
+            </p>
+          </div>
+        </div>
+
+        <h3 class="frase-final">
+          "O futuro será escrito em linguagem quântica."
+        </h3>
       </div>
     </section>
 
