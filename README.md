@@ -10,7 +10,7 @@ Landing page temática inspirada na computação quântica e no paradoxo do Gato
 ## 🛠 Tecnologias
 - HTML5
 - CSS3
-- JavaScript
+
 
 ## 🌐 Preview
 Deploy: https://devraz02.github.io/Realidade-Incerta/
